@@ -1,0 +1,26 @@
+package week6.day2.TestNG.listeners;
+
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class CreateLead extends BaseClass{
+	@Test
+	public  void CreateLeacdTC_01 () {
+		
+		driver.findElement(By.linkText("Create Lead")).click();
+		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("TestLeaf");
+		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Hari");
+		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("R");
+		driver.findElement(By.name("submitButton")).click();
+		throw new NoSuchElementException();
+		
+}
+}
+
+
+
+
+
+
